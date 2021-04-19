@@ -1,0 +1,49 @@
+.products-we-sell-div{
+  display: flex;
+  overflow-x: scroll;
+  /* background-color: red; */
+  scroll-snap-type: x mandatory;
+  
+  scrollbar-width: 0;
+}
+
+/* hiding scrollbar */
+.products-we-sell-div::-webkit-scrollbar{
+  height: 1rem;
+}
+.products-we-sell-div::-webkit-scrollbar-track{
+  background-color: lightgrey;
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
+.products-we-sell-div::-webkit-scrollbar-thumb{
+  background-color: orange;
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
+
+.products-we-sell-div > div{
+  width: 100%; 
+  height: 50vh;
+  flex-shrink: 0;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+}
+
+.products-child-1{
+  display: flex;
+  align-items: center;
+}
+
+.products-child-1 > img{
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.products-child-1 > p{
+  width: 50%;
+  text-align: center;
+}
